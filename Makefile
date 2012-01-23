@@ -18,8 +18,8 @@ include $(DEVKITPPC)/wii_rules
 TARGET		:=	boot
 BUILD		:=	build
 SOURCES		:=	source
-DATA		:=	data  
-INCLUDES	:=
+DATA		:=	data
+INCLUDES	:=	source
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -33,13 +33,13 @@ LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
-LIBS	:=	 -lwiiuse -lbte -lmad -lasnd -lfat -logc -lm -lz
+LIBS	:=	 -lwiiuse -lbte -lmad -lasnd -lfat -logc -lm -lz -lvorbisidec
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
 # include and lib
 #---------------------------------------------------------------------------------
-LIBDIRS	:=
+LIBDIRS	:=	$(PORTLIBS)
 
 #---------------------------------------------------------------------------------
 # no real need to edit anything past this point unless you need to add additional
