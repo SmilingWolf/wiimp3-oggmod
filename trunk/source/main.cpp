@@ -37,6 +37,7 @@ char *mbuffer;
 size_t mresult;
 char *mp3_url;
 char *ogg_url;
+int volume = 120;
 
 /*Function prototype */
 void play_menu_mp3 ();
@@ -261,7 +262,6 @@ play_menu_mp3 (void)
   int minutes = 0;
   char *status = 0;
   int slash = 1;
-  int volume = 120;
 
   /*Open selected file */
   music = fopen (mp3_url, "rb");
@@ -463,7 +463,6 @@ play_menu_ogg (void)
   int stopped = 0;
   int paused = 0;
   int slash = 1;
-  int volume = 120;
 
   /*Open selected file */
   music = fopen (ogg_url, "rb");
