@@ -1,0 +1,1 @@
+A MOD of the official WiiMP3 by Wentstorm with OGG support. Since ATM Wentstorm doesn't want to add support to OGG files in the mainstream here is were I will put these changes.
